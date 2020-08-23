@@ -72,3 +72,54 @@
   .seta{
     margin-left: 10px;
   }
+
+/* CSS dos contatos dos develops */
+
+  .column {
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-left: 40%;
+  }
+  
+  .column img {
+   width: 33.3%;
+   margin-top: 20px;
+   margin-left: 3%;
+  }
+
+  .row h2 {
+    margin-left:47%;
+    margin-top: 65px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  }
+
+  .column h3{
+    font-family: 'Courier New', Courier, monospace; 
+    margin-top: 15px;
+    text-align: center;
+    margin-left: -60%;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .button {
+    background-color: rgb(70, 6, 112);
+    border: none;
+    color: white;
+    padding: 15px 42px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  /* final do CSS dos contatos dos develops */
