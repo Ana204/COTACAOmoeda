@@ -144,116 +144,181 @@
         </div>
       </div>
       <hr>
-          <figure>
+          <figure style="max-width: 800px; margin: auto;">
             <div class="tabela_do_grafico" >
               <canvas class="line-chart"></canvas>
             </div>
           </figure>
-      <hr>
+      <hr style="background-color: rgb(55, 8, 98);">
     </section> 
     
     <section>
-      <div class="Titilos">
-        <h2>COTAÇÃO MOEDAS</h2>  
-        <div class="pai">
-          <div class="icone"> 
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"/>
-              <path fill-rule="evenodd" d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
-            </svg> 
+        <div class="Titilos">
+          <h2>COTAÇÃO MOEDAS</h2>  
+          <div class="pai">
+            <div class="icone"> 
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"/>
+                <path fill-rule="evenodd" d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+              </svg> 
+            </div>
+            <div class="atualizacao">Atualizado em: 21/08/2020</div>
           </div>
-          <div class="atualizacao">Atualizado em: 21/08/2020</div>
         </div>
+        <hr>      
+          <div class="row">
+            <div class="col-sm" style="width:380px;">
+              <div class="info_moeadas_area">
+                <div class="info_moeda_int1">
+                    <div>
+                      <h5 id="nome_moeda_1">DÓLAR COMERCIAL</h5>
+                    </div>
+                    <div class="seta"style="height: 40px; width: 40px;">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9.896 2.396a.5.5 0 0 0 0 .708l2.647 2.646-2.647 2.646a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+                        <path fill-rule="evenodd" d="M13.25 5.75a.5.5 0 0 0-.5-.5h-6.5a2.5 2.5 0 0 0-2.5 2.5v5.5a.5.5 0 0 0 1 0v-5.5a1.5 1.5 0 0 1 1.5-1.5h6.5a.5.5 0 0 0 .5-.5z"/>
+                      </svg>
+                    </div>
+                </div>
+                <div class="info_moeda_int2">
+                  <div class="porcentagem" id="porcentagem_moeda_1">
+                   
+                  </div>
+                  <div class="preco_moeda" id="preco_moeda_1">
+                    
+                  </div>
+                </div>
+                <div class="grafico_moedas">
+                  <figure ><canvas style="margin-top: -45px;" class="dolar"></canvas></figure>
+                </div>                
+              
+              </div>
+            </div>
+            <div class="col-sm" style="width:380px;">
+              <div class="info_moeadas_area">
+                <div class="info_moeda_int1">
+                    <div>
+                      <h5 id="nome_moeda_2"><h5>
+                    </div>
+                    <div class="seta"style="height: 40px; width: 40px;">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9.896 2.396a.5.5 0 0 0 0 .708l2.647 2.646-2.647 2.646a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+                        <path fill-rule="evenodd" d="M13.25 5.75a.5.5 0 0 0-.5-.5h-6.5a2.5 2.5 0 0 0-2.5 2.5v5.5a.5.5 0 0 0 1 0v-5.5a1.5 1.5 0 0 1 1.5-1.5h6.5a.5.5 0 0 0 .5-.5z"/>
+                      </svg>
+                    </div>
+                </div>
+                <div class="info_moeda_int2">
+                  <div class="porcentagem" id="porcentagem_moeda_2">
+                  
+                  </div>
+                  <div class="preco_moeda" id="preco_moeda_2">
+                  
+                  </div>
+                </div>
+                <div class="grafico_moedas">
+                  <figure  ><canvas style="margin-top: -45px;" class="libra"></canvas></figure>
+                </div> 
+              
+              </div>
+            </div>
+            <div class="col-sm" style="width:380px;">
+              <div class="info_moeadas_area">
+                <div class="info_moeda_int1">
+                    <div>
+                       <h5 id="nome_moeda_3">DÓLAR COMERCIAL<h5>
+                    </div>
+                    <div class="seta"style="height: 40px; width: 40px;">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9.896 2.396a.5.5 0 0 0 0 .708l2.647 2.646-2.647 2.646a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+                        <path fill-rule="evenodd" d="M13.25 5.75a.5.5 0 0 0-.5-.5h-6.5a2.5 2.5 0 0 0-2.5 2.5v5.5a.5.5 0 0 0 1 0v-5.5a1.5 1.5 0 0 1 1.5-1.5h6.5a.5.5 0 0 0 .5-.5z"/>
+                      </svg>
+                    </div>
+                </div>
+                <div class="info_moeda_int2">
+                  <div class="porcentagem" id="porcentagem_moeda_3">
+                  
+                  </div>
+                  <div class="preco_moeda" id="preco_moeda_3">
+             
+                  </div>
+                </div>
+                <div class="grafico_moedas">
+                  <figure><canvas style="margin-top: -45px;" class="euro"></canvas></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section>
+      <div class="Titilos">
+        <h3>CONVERSOR DE MOEDAS</h3>  
       </div>
       <hr>      
-        <div class="row">
-          <div class="col-sm" style="width:380px;">
-            <div class="info_moeadas_area">
-              <div class="info_moeda_int1">
-                  <div>
-                    <h5>DÓLAR COMERCIAL</h5>
-                  </div>
-                  <div class="seta"style="height: 40px; width: 40px;">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M9.896 2.396a.5.5 0 0 0 0 .708l2.647 2.646-2.647 2.646a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                      <path fill-rule="evenodd" d="M13.25 5.75a.5.5 0 0 0-.5-.5h-6.5a2.5 2.5 0 0 0-2.5 2.5v5.5a.5.5 0 0 0 1 0v-5.5a1.5 1.5 0 0 1 1.5-1.5h6.5a.5.5 0 0 0 .5-.5z"/>
-                    </svg>
-                  </div>
-              </div>
-              <div class="info_moeda_int2">
-                <div class="porcentagem">
-                 + 1.32%
+      <div class="container">
+        <form class="form_converçao">
+            <div class="calculadora" style="width: 100%;">
+                <div class="">
+                    <div class="colocar_valor">
+                        <label for="fname">Valor:</label><br>
+                        <div class=flex>
+                          <input type="text" id="valor_a_ser_convertido" name="fname" placeholder="500">
+                          <div class="btn_clacular" onclick="calcular_convercao()">
+                            >
+                          </div>
+                        </div>
+
+                      </div>
                 </div>
-                <div class="preco_moeda">
-                  R$5,4321
+                <div class="da_moeda">
+                    <div class="valor_da_moeda1">
+                        <div>
+                            <label for="fname">Da moeda</label><br>
+                            <div class="bandeira_and_nome">
+                                <div class="bandeira1"></div>
+                                <select id="moeda_de_conversao_1" name="cars">
+                                </select>
+                                <div class="">
+                                  <div class="reverter_moeda">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M2.854 7.146a.5.5 0 0 0-.708 0l-2 2a.5.5 0 1 0 .708.708L2.5 8.207l1.646 1.647a.5.5 0 0 0 .708-.708l-2-2zm13-1a.5.5 0 0 0-.708 0L13.5 7.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0 0-.708z"/>
+                                      <path fill-rule="evenodd" d="M8 3a4.995 4.995 0 0 0-4.192 2.273.5.5 0 0 1-.837-.546A6 6 0 0 1 14 8a.5.5 0 0 1-1.001 0 5 5 0 0 0-5-5zM2.5 7.5A.5.5 0 0 1 3 8a5 5 0 0 0 9.192 2.727.5.5 0 1 1 .837.546A6 6 0 0 1 2 8a.5.5 0 0 1 .501-.5z"/>
+                                    </svg>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                        
+                      </div>
                 </div>
+                <div class="para_moeda">
+                    <div class="valor_da_moeda1">
+                        <div>
+                            <label for="fname">Para a moeda</label><br>
+                            <div class="bandeira_and_nome">
+                                <div class="bandeira1"></div>
+                                <select id="moeda_de_conversao_2" name="cars">
+                                </select>
+                            </div>
+                        </div>
+                        
+                      </div>
               </div>
-              <div class="grafico_moedas">
-                <figure ><canvas style="margin-top: -45px;" class="dolar"></canvas></figure>
-              </div>                
-            
-            </div>
           </div>
-          <div class="col-sm" style="width:380px;">
-            <div class="info_moeadas_area">
-              <div class="info_moeda_int1">
-                  <div>
-                    <h5>DÓLAR COMERCIAL<h5>
-                  </div>
-                  <div class="seta"style="height: 40px; width: 40px;">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M9.896 2.396a.5.5 0 0 0 0 .708l2.647 2.646-2.647 2.646a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                      <path fill-rule="evenodd" d="M13.25 5.75a.5.5 0 0 0-.5-.5h-6.5a2.5 2.5 0 0 0-2.5 2.5v5.5a.5.5 0 0 0 1 0v-5.5a1.5 1.5 0 0 1 1.5-1.5h6.5a.5.5 0 0 0 .5-.5z"/>
-                    </svg>
-                  </div>
-              </div>
-              <div class="info_moeda_int2">
-                <div class="porcentagem">
-                 + 1.32%
-                </div>
-                <div class="preco_moeda">
-                  R$5,4321
-                </div>
-              </div>
-              <div class="grafico_moedas">
-                <figure  ><canvas style="margin-top: -45px;" class="libra"></canvas></figure>
-              </div> 
-            
+        </form>    
+        <div class="resultado_do_calculo">
+            <div class="numero_pequeno">
+              0 =
             </div>
-          </div>
-          <div class="col-sm" style="width:380px;">
-            <div class="info_moeadas_area">
-              <div class="info_moeda_int1">
-                  <div>
-                     <h5>DÓLAR COMERCIAL<h5>
-                  </div>
-                  <div class="seta"style="height: 40px; width: 40px;">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M9.896 2.396a.5.5 0 0 0 0 .708l2.647 2.646-2.647 2.646a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                      <path fill-rule="evenodd" d="M13.25 5.75a.5.5 0 0 0-.5-.5h-6.5a2.5 2.5 0 0 0-2.5 2.5v5.5a.5.5 0 0 0 1 0v-5.5a1.5 1.5 0 0 1 1.5-1.5h6.5a.5.5 0 0 0 .5-.5z"/>
-                    </svg>
-                  </div>
-              </div>
-              <div class="info_moeda_int2">
-                <div class="porcentagem">
-                 + 1.32%
-                </div>
-                <div class="preco_moeda">
-                  R$5,4321
-                </div>
-              </div>
-              <div class="grafico_moedas">
-                <figure><canvas style="margin-top: -45px;" class="euro"></canvas></figure>
-              </div>
+            <div class="numero_grande">
+              0
             </div>
-          </div>
         </div>
+    </div>
     </section>
   </div>
 
-<section class="footer4 cid-s8rED7G1Uo" once="footers" id="footer4-s">
 
-    
+<section class="footer4 cid-s8rED7G1Uo" once="footers" id="footer4-s">    
     <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);"></div>
     <div class="container">
         <div class="row mbr-white">
