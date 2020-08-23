@@ -1,12 +1,14 @@
 /* CSS da Ana */
 
 .nomeIbovespa{
+    margin-top: 5px;
     width: 300px; 
     margin-left: 15px; 
-    color:black;
-    font-family: 'Courier New', Courier, monospace;
+    color:rgb(70, 6, 112);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .Titilos{
+    color: rgb(70, 6, 112);
     width: auto; 
     margin-left: 15px;
     margin-top: 70px;
@@ -35,7 +37,7 @@
     color: black; 
   }
   .tabela_do_grafico{
-    border: 2px solid #DB3E07;
+    border: 2px solid black;
     border-radius: 3px;
   }
   /*GRAFICOS DAS MOEDAS */
