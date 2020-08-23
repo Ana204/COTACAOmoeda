@@ -109,3 +109,41 @@
       margin-left: 100px;
     }
   }
+  
+
+  /*CALCULADORA*/
+
+  .resultado_do_calculo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+  .numero_pequeno{
+
+  }
+  .numero_grande{
+    margin-left:10px ;
+    font-size: 30px;
+    color: #460670;
+  }
+  .btn_clacular{
+    border:2px solid #811dc4;
+    height:32px;
+    width: 30px;
+    margin-top: 1px;
+    margin-left: 3px;
+    border-radius: 3px ;
+    font-size: 20px;
+    text-align: center;
+    color: blueviolet;
+  }
+  .btn_clacular:hover{
+    background-color: #460670;
+    color: white;
+
+  }
+  .flex{
+    display: flex;
+  }

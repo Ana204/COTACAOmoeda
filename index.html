@@ -254,10 +254,10 @@
         <h2>CALCULADORA PARA CONVERSÃO DE MOEDAS</h2>  
         <div class="pai">
           <div class="icone"> 
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"/>
-              <path fill-rule="evenodd" d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
-            </svg> 
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-return-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.146 5.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 9l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+              <path fill-rule="evenodd" d="M3 2.5a.5.5 0 0 0-.5.5v4A2.5 2.5 0 0 0 5 9.5h8.5a.5.5 0 0 0 0-1H5A1.5 1.5 0 0 1 3.5 7V3a.5.5 0 0 0-.5-.5z"/>
+            </svg>
           </div>
           <div class="atualizacao">Atualizado em: 21/08/2020</div>
         </div>
@@ -270,7 +270,13 @@
                 <div class="">
                     <div class="colocar_valor">
                         <label for="fname">Valor:</label><br>
-                        <input type="text" id="fname" name="fname" placeholder="500"><br>
+                        <div class=flex>
+                          <input type="text" id="valor_a_ser_convertido" name="fname" placeholder="500">
+                          <div class="btn_clacular" onclick="calcular_convercao()">
+                            >
+                          </div>
+                        </div>
+
                       </div>
                 </div>
                 <div class="">
@@ -279,8 +285,7 @@
                             <label for="fname">Da moeda</label><br>
                             <div class="bandeira_and_nome">
                                 <div class="bandeira1"></div>
-                                <select id="cars" name="cars">
-                                    <option value="volvo">USD (Estados Unidos)</option>
+                                <select id="moeda_de_conversao_1" name="cars">
                                 </select>
                                 <div class="">
                                   <div class="reverter_moeda"></div>
@@ -296,15 +301,23 @@
                             <label for="fname">Para a moeda</label><br>
                             <div class="bandeira_and_nome">
                                 <div class="bandeira1"></div>
-                                <select id="cars" name="cars">
-                                    <option value="volvo">USD (Estados Unidos)</option>
+                                <select id="moeda_de_conversao_2" name="cars">
                                 </select>
                             </div>
                         </div>
                         
                       </div>
-            </div>
+              </div>
+          </div>
         </form>    
+        <div class="resultado_do_calculo">
+            <div class="numero_pequeno">
+              0 =
+            </div>
+            <div class="numero_grande">
+              0
+            </div>
+        </div>
     </div>
 
     </section>

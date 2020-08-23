@@ -17,6 +17,136 @@ const options = {
     rederizarGraficosMoedas('libra','BTC')
     rederizarGraficosMoedas('euro','EUR')
 
+    adicionandoMoedasNaDropDanw();
+
+        function adicionandoMoedasNaDropDanw() {
+
+            fetch('https://economia.awesomeapi.com.br/all', options)
+            .then(response => {
+                if(!response.ok) throw new Error('Erro ao executar requisição')
+                console.log(response.ok)
+                return response.json();
+            })
+            .then(data => {
+                escrever(data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+            function escrever(data){
+
+                let select = document.getElementById("moeda_de_conversao_1")
+                let select2 = document.getElementById("moeda_de_conversao_2")
+
+                dadosAPI = []
+                nomesDasMoedas = []
+                codigoDaMoeda = []
+                
+
+                //Convertendo o objeto em array
+                dadosAPI = Object.values(data)
+
+                //adicionando as opitions na tag section
+                dadosAPI.forEach(element => {
+
+                    let nome_da_moeda = element.code + "("+element.name+")"
+
+                    let moeda = document.createElement('option')
+                    moeda.setAttribute("value", element.code)
+                    let text = document.createTextNode(nome_da_moeda)
+                    moeda.appendChild(text) 
+
+                    console.log(nome_da_moeda)
+
+                    select.appendChild(moeda)
+
+                });
+
+                
+                dadosAPI.forEach(element => {
+
+                        let nome_da_moeda = element.code + "("+element.name+")"
+
+                        let moeda = document.createElement('option')
+                        moeda.setAttribute("value", element.code)
+                        let text = document.createTextNode(nome_da_moeda)
+                        moeda.appendChild(text) 
+
+                        console.log(nome_da_moeda)
+
+                        select2.appendChild(moeda)
+
+
+                });
+
+                
+
+            }
+
+        }
+
+        function calcular_convercao() {
+            var valor = document.getElementById("valor_a_ser_convertido").value
+
+
+            fetch('https://economia.awesomeapi.com.br/all', options)
+            .then(response => {
+                if(!response.ok) throw new Error('Erro ao executar requisição')
+                console.log(response.ok)
+                return response.json();
+            })
+            .then(data => {
+                escrever(data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+            function escrever(data) {
+                dadosAPI = []
+
+                
+
+                //Convertendo o objeto em array
+                dadosAPI = Object.values(data)
+
+                let valor_moeda1 = document.getElementById("moeda_de_conversao_1").value
+                let valor_moeda2 = document.getElementById("moeda_de_conversao_2").value    
+                let dados_da_moeda1 = []
+                let dados_da_moeda2  = []
+
+                dadosAPI.forEach(element => {
+                    if(element.code == valor_moeda1){
+                        dados_da_moeda1 = element
+
+                    }
+                    if (element.code == valor_moeda2) {
+                        dados_da_moeda2 = element
+
+                         
+                    }
+                });
+                
+                let result = dados_da_moeda1.bid/dados_da_moeda2.bid
+
+                valor_menor = document.getElementById("numero_pequeno")
+                valor_maior = document.getElementById("numero_grande")
+
+                alert(valor_maior)
+
+                result_valor_menor = dados_da_moeda1.code + " " + valor
+                result_valor_maior = dados_da_moeda2.code + " " + result
+
+                valor_menor.text = result_valor_menor
+                valor_maior.text = result_valor_maior
+            }
+            
+            
+        }
+
 
 
 
@@ -165,7 +295,7 @@ const options = {
                         var chartGraph = new Chart(ctx, {
                             type: 'line',
                             data: {
-                            labels: ["10","9","8","7","5","6","7","8","9","10"],
+                            labels: ["10","9","8","7","5","6","7","8","9","10","11","12","13"],
                             datasets: [
                             {
                     
