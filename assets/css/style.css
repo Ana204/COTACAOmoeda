@@ -2,39 +2,39 @@
 
 .nomeIbovespa{
     margin-top: 5px;
-    width: 300px; 
-    margin-left: 15px; 
+    width: 300px;
+    margin-left: 15px;
     color:rgb(70, 6, 112);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .Titilos{
-    color: rgb(70, 6, 112);
-    width: auto; 
+    color: rgb(0, 0, 0);
+    width: auto;
     margin-left: 15px;
     margin-top: 70px;
-    font-family: 'Courier New', Courier, monospace; 
-  
+    font-family: sans-serif;
+
   }
   .pai{
     display: flex;
-  
+
   }
   .icone{
-    width: 30px; 
+    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black; 
+    color: black;
     opacity: 90%;
-  
-  
+
+
   }
   .atualizacao{
     width: 250px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     opacity: 90%;
-    color: black; 
+    color: black;
   }
   .tabela_do_grafico{
     border: 2px solid black;
@@ -45,7 +45,7 @@
     display:flex;
   }
   .info_moeda_int2{
-  
+
     margin-top: -5px;
     display:flex;
     align-items:center;
@@ -61,8 +61,8 @@
     border-radius:8px;
     border:1px solid #DDDDDD;
     color:#DDDDDD;
-   
-   
+
+
   }
   .preco_moeda{
     margin-left:5px;
@@ -72,9 +72,7 @@
   .seta{
     margin-left: 10px;
   }
-  .valor_da_moeda1{
-  
-  }
+
   .bandeira1{
   height:30px;
   width:30px;
@@ -87,13 +85,13 @@
   display:flex
   }
   .reverter_moeda{
-  height:30px;
-  width:30px;
-  background-color:green;
   margin-left:50px ;
+  color: black;
   }
   .valor_da_moeda1{
       display: flex;
+      font-family: Arial, Helvetica, sans-serif;
+
   }
   .bandeira_and_nome{
       display: flex;
@@ -107,5 +105,21 @@
     .calculadora{
       flex-direction: column;
       margin-left: 100px;
+      margin-top: 20px;
     }
   }
+  .colocar_valor{
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black
+  }
+  .para_moeda{
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black
+  }
+.da_moeda{
+  font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
