@@ -119,9 +119,9 @@
     align-items: center;
     margin: 50px;
   }
-  .numero_pequeno{
+  /* .numero_pequeno{
 
-  }
+  } */
   .numero_grande{
     margin-left:10px ;
     font-size: 30px;
