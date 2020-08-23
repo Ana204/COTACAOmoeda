@@ -302,8 +302,8 @@ const options = {
                                 label: "",
                                 data: bidDosDias,
                                 borderWidth: 3,
-                                borderColor: '#00A78B',
-                                backgroundColor: '#282828',
+                                borderColor: '#460670',
+                                backgroundColor: '#65107063',
                             },
                             ]
                             },
@@ -372,8 +372,8 @@ const options = {
                         label: "Euro",
                         data: dados,
                         borderWidth: 3,
-                        borderColor: '#034138',
-                        backgroundColor: '#99c5bf',
+                        borderColor: '#000000',
+                        backgroundColor: '#12021463',
                     },
                     ]
                     },
