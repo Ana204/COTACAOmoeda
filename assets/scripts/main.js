@@ -8,14 +8,22 @@ const options = {
     renderizarInfoDasMoedas('nome_moeda_1', 'porcentagem_moeda_1', 'preco_moeda_1','USD',"Dólar Comercial")
     renderizarInfoDasMoedas('nome_moeda_2', 'porcentagem_moeda_2', 'preco_moeda_2','BTC',"Bitcoin")
     renderizarInfoDasMoedas('nome_moeda_3', 'porcentagem_moeda_3', 'preco_moeda_3','EUR',"Euro")
+    renderizarInfoDasMoedas('nome_moeda_4', 'porcentagem_moeda_4', 'preco_moeda_4','GBP',"Libra Esterlina")
+    renderizarInfoDasMoedas('nome_moeda_5', 'porcentagem_moeda_5', 'preco_moeda_5','ARS',"Peso Argentino")
+    renderizarInfoDasMoedas('nome_moeda_6', 'porcentagem_moeda_6', 'preco_moeda_6','ETH',"Ethereum")
+    
     
     // renderizarInfoDasMoedas('GBP');
     // renderizarInfoDasMoedas('EUR');
 
     //chamando a função para renderizar os graficos das moedas.
     rederizarGraficosMoedas('dolar','USD')
-    rederizarGraficosMoedas('libra','BTC')
+    rederizarGraficosMoedas('bitcoin','BTC')
     rederizarGraficosMoedas('euro','EUR')
+    rederizarGraficosMoedas('libra','GBP')
+    rederizarGraficosMoedas('peso','ARS')
+    rederizarGraficosMoedas('ethe','ETH')
+    
 
     adicionandoMoedasNaDropDanw();
 
@@ -145,7 +153,9 @@ const options = {
                     }
                 });
                 
-                let result = dados_da_moeda1.bid/dados_da_moeda2.bid
+                let cambio = dados_da_moeda1.bid/dados_da_moeda2.bid
+
+                let result = cambio * valor
 
                 valor_menor = document.getElementById("numero_pequeno")
                 valor_maior = document.getElementById("numero_grande")
@@ -157,6 +167,9 @@ const options = {
 
                 valor_menor.innerHTML = result_valor_menor
                 valor_maior.innerHTML = result_valor_maior
+
+                result = ""
+                result_valor_maior = ""
             }
             
             
@@ -384,7 +397,7 @@ const options = {
                     datasets: [
                     {
             
-                        label: "Euro",
+                        label: "",
                         data: dados,
                         borderWidth: 3,
                         borderColor: '#000000',
@@ -442,11 +455,72 @@ function setarBandeira(event) {
 
                         let bandeira = document.getElementById("bandeira1")
 
+                        bandeira.innerText = ""
+
                         let imagem_da_bandeira = document.createElement("img")
                         imagem_da_bandeira.setAttribute("src", "assets/images/"+nome)
+                        imagem_da_bandeira.setAttribute("width", "60px")
+                        imagem_da_bandeira.setAttribute("height", "30px")
 
                         bandeira.appendChild(imagem_da_bandeira)
+                        
                     }
+                    
+                });
+
+
+
+
+
+            }
+
+            
+}
+
+function setarBandeira2(event) {
+
+    
+    moeda_ID = document.getElementById(event.target.id)
+    moeda = moeda_ID.value
+
+    fetch('https://economia.awesomeapi.com.br/all', options)
+            .then(response => {
+                if(!response.ok) throw new Error('Erro ao executar requisição')
+                console.log(response.ok)
+                return response.json();
+            })
+            .then(data => {
+                escrever(data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+            function escrever(data){
+                dadosAPI = []
+                
+
+                //Convertendo o objeto em array
+                dadosAPI = Object.values(data)
+
+                dadosAPI.forEach(element => {
+                    if(element.code == moeda){
+                        let nome = moeda+".png"
+
+                        let bandeira = document.getElementById("bandeira2")
+
+                        bandeira.innerText = ""
+
+                        let imagem_da_bandeira = document.createElement("img")
+                        imagem_da_bandeira.setAttribute("src", "assets/images/"+nome)
+                        imagem_da_bandeira.setAttribute("width", "60px")
+                        imagem_da_bandeira.setAttribute("height", "30px")
+
+                        bandeira.appendChild(imagem_da_bandeira)
+                        
+                    }
+                    
                 });
 
 
