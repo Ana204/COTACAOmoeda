@@ -274,8 +274,8 @@
                         <div>
                             <label for="fname">Da moeda</label><br>
                             <div class="bandeira_and_nome">
-                                <div class="bandeira1"></div>
-                                <select id="moeda_de_conversao_1" name="cars">
+                                <div class="bandeira1" id="bandeira1"></div>
+                                <select onChange="setarBandeira(event)" id="moeda_de_conversao_1" name="cars">
                                 </select>
                                 <div class="">
                                   <div class="reverter_moeda">
@@ -296,7 +296,7 @@
                             <label for="fname">Para a moeda</label><br>
                             <div class="bandeira_and_nome">
                                 <div class="bandeira1"></div>
-                                <select id="moeda_de_conversao_2" name="cars">
+                                <select onChange="setarBandeira()" id="moeda_de_conversao_2" name="cars">
                                 </select>
                             </div>
                         </div>
@@ -401,6 +401,5 @@
   <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     
   <script src="./assets/scripts/main.js"></script>
-  
 </body>
 </html>

@@ -407,3 +407,53 @@ const options = {
         }
 
  //------------------------------------------------------------------------------------
+
+ 
+function setarBandeira(event) {
+
+    
+    moeda_ID = document.getElementById(event.target.id)
+    moeda = moeda_ID.value
+
+    fetch('https://economia.awesomeapi.com.br/all', options)
+            .then(response => {
+                if(!response.ok) throw new Error('Erro ao executar requisição')
+                console.log(response.ok)
+                return response.json();
+            })
+            .then(data => {
+                escrever(data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+            function escrever(data){
+                dadosAPI = []
+                
+
+                //Convertendo o objeto em array
+                dadosAPI = Object.values(data)
+
+                dadosAPI.forEach(element => {
+                    if(element.code == moeda){
+                        let nome = moeda+".png"
+
+                        let bandeira = document.getElementById("bandeira1")
+
+                        let imagem_da_bandeira = document.createElement("img")
+                        imagem_da_bandeira.setAttribute("src", "assets/images/"+nome)
+
+                        bandeira.appendChild(imagem_da_bandeira)
+                    }
+                });
+
+
+
+
+
+            }
+
+            
+}
