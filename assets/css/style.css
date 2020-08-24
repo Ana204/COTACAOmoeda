@@ -1,0 +1,308 @@
+/* CSS da Ana */
+
+.nomeIbovespa{
+    margin-top: 50px;
+    width: 300px;
+    margin-left: 15px;
+    color:rgb(70, 6, 112);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .Titilos{
+    color: rgb(0, 0, 0);
+    width: auto;
+    margin-left: 15px;
+    margin-top: 70px;
+    font-family: sans-serif;
+
+  }
+  .pai{
+    display: flex;
+
+  }
+  .icone{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    opacity: 90%;
+
+
+  }
+  .atualizacao{
+    width: 250px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    opacity: 90%;
+    color: black;
+  }
+  .tabela_do_grafico{
+    border: 2px solid black;
+    border-radius: 3px;
+  }
+  /*GRAFICOS DAS MOEDAS */
+  .info_moeda_int1{
+    display:flex;
+  }
+  .info_moeda_int2{
+
+    margin-top: -5px;
+    display:flex;
+    align-items:center;
+  }
+  .porcentagem{
+    background-color:green;
+    width:auto;
+    height:auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size:15px;
+    text-align:center;
+    border-radius:8px;
+    border:1px solid #DDDDDD;
+    color:#DDDDDD;
+
+
+  }
+  .preco_moeda{
+    margin-left:5px;
+    font-size:18px;
+    color:#888888;
+  }
+  .seta{
+    margin-left: 10px;
+  }
+
+  .moedas2{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 85px;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .moedas2{
+      flex-direction: column;
+
+    }
+  }
+  .bi-chevron-right{
+    color: rgb(70, 6, 112);
+  }
+
+
+/* CSS dos contatos dos develops */
+
+#contatos{
+  text-align: center;
+  margin-top: 55px;
+  color: rgb(70, 6, 112);
+  padding: 40px;
+}
+.devs{
+  text-align: center;
+  margin-top: 55px;
+  color: white;
+  padding: 40px;
+}
+
+#sobre_deni{
+  background: #ffffff; 
+  border-radius: 6px; 
+  padding: 15px;
+  cursor: pointer; 
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgba(70, 6, 112, 0.472);
+}
+
+#sobre_anna{
+  background:  #ffffff;
+   border-radius: 6px; 
+   padding: 15px; 
+   cursor: pointer; 
+   font-size: 20px; 
+   margin-left: 15%; 
+   margin-right: 15%;
+   margin-bottom: 10px;
+   box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+
+#sobre_artur{    
+  background: #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_jason{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_mateus{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_nicolas{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 5px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+
+.painelLogin{
+  width: 30%;
+  margin: auto;
+  display: flex;
+}
+.nomes{
+  width: 30%;
+  margin: auto;
+  display: flex;
+}
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /* final do CSS dos contatos dos develops */
+
+  .bandeira1{
+  height:30px;
+  width:50px;
+  border-radius:15px;
+  background-color:#490a728e;
+  margin-right:10px;
+  margin-left: 5px;
+  overflow: hidden;
+  }
+  .form_converçao{
+  display:flex
+  }
+  .reverter_moeda{
+  margin-left:50px ;
+  color: black;
+  }
+  .valor_da_moeda1{
+      display: flex;
+      font-family: Arial, Helvetica, sans-serif;
+
+  }
+  .bandeira_and_nome{
+      display: flex;
+  }
+  .calculadora{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  @media only screen and (max-width: 800px) {
+    .calculadora{
+      flex-direction: column;
+      margin-left: 100px;
+      margin-top: 20px;
+    }
+  }
+  
+
+  /*CALCULADORA*/
+
+  .resultado_do_calculo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+  
+  .numero_grande{
+    margin-left:10px ;
+    font-size: 30px;
+    color: #460670;
+  }
+  .btn_clacular{
+    border:1px solid black;
+    height:32px;
+    width: 30px;
+    margin-top: 1px;
+    margin-left: 3px;
+    border-radius: 3px ;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(70, 6, 112);
+  }
+  .btn_clacular:hover{
+    background-color: #460670;
+    color: white;
+
+  }
+  .quadrado_input{
+    border: 1px solid rgb(70, 6, 112);
+    border-radius: 3px ;
+  }
+
+  .quadrado2{
+    border:1px solid rgba(188, 150, 209, 0.431);
+    border-radius: 3px ;
+  }
+  .quadrado2:hover{
+    border: 1px solid rgb(70, 6, 112);
+  }
+  .quadrado3{
+    border:1px solid rgba(188, 150, 209, 0.431);
+    border-radius: 3px ;
+  }
+  .quadrado3:hover{
+    border: 1px solid rgb(70, 6, 112);
+  }
+
+  .flex{
+    display: flex;
+  }
+  .colocar_valor{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black
+  }
+  .para_moeda{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black
+  }
+  .da_moeda{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+<<<<<<< HEAD
+
+=======
+.set_cor{
+  background-color: #460670 !important; 
+  color: #460670 !important;
+}
+>>>>>>> 688c7e83be64e4d76a2abea44e63ecffced70677
