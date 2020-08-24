@@ -81,6 +81,21 @@ const options = {
 
                 });
 
+                //Adicionando a Moeda BRL, porque não tem na API 
+
+                // let moeda_BRL = document.createElement('option')
+                // moeda_BRL.setAttribute("value", "BRL")
+                // let text2 = document.createTextNode("BRL(Real Brasil)")
+                // moeda_BRL.appendChild(text2)
+
+                // select.appendChild(moeda_BRL)
+
+                // let moeda_BRL2 = document.createElement('option')
+                // moeda_BRL2.setAttribute("value", "BRL")
+                // let text22 = document.createTextNode("BRL(Real Brasil)")
+                // moeda_BRL2.appendChild(text22)
+
+                // select2.appendChild(moeda_BRL2)
                 
 
             }
@@ -135,13 +150,13 @@ const options = {
                 valor_menor = document.getElementById("numero_pequeno")
                 valor_maior = document.getElementById("numero_grande")
 
-                alert(valor_maior)
+                alert(valor_maior.innerHTML)
 
-                result_valor_menor = dados_da_moeda1.code + " " + valor
-                result_valor_maior = dados_da_moeda2.code + " " + result
+                result_valor_menor = dados_da_moeda1.code + " " + valor + " ="
+                result_valor_maior = dados_da_moeda2.code + " " + result.toFixed(2)
 
-                valor_menor.text = result_valor_menor
-                valor_maior.text = result_valor_maior
+                valor_menor.innerHTML = result_valor_menor
+                valor_maior.innerHTML = result_valor_maior
             }
             
             
@@ -295,7 +310,7 @@ const options = {
                         var chartGraph = new Chart(ctx, {
                             type: 'line',
                             data: {
-                            labels: ["10","9","8","7","5","6","7","8","9","10","11","12","13"],
+                            labels: ["-9","-8","-7","-6","-5","-4","-3","-2","-1","Ontem","+1","+2","+3"],
                             datasets: [
                             {
                     
