@@ -75,6 +75,7 @@
 
   .moedas2{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 85px;
     flex-wrap: wrap;
   }
@@ -195,11 +196,12 @@
 
   .bandeira1{
   height:30px;
-  width:30px;
+  width:50px;
   border-radius:15px;
-  background-color:red;
+  background-color:#490a728e;
   margin-right:10px;
   margin-left: 5px;
+  overflow: hidden;
   }
   .form_converçao{
   display:flex
@@ -296,4 +298,11 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
+<<<<<<< HEAD
 
+=======
+.set_cor{
+  background-color: #460670 !important; 
+  color: #460670 !important;
+}
+>>>>>>> 688c7e83be64e4d76a2abea44e63ecffced70677
