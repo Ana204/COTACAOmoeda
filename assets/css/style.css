@@ -92,54 +92,107 @@
 
 /* CSS dos contatos dos develops */
 
-  .column {
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    margin-left: 40%;
-  }
-  
-  .column img {
-   width: 33.3%;
-   margin-top: 20px;
-   margin-left: 3%;
-  }
+#contatos{
+  text-align: center;
+  margin-top: 55px;
+  color: rgb(70, 6, 112);
+  padding: 40px;
+}
+.devs{
+  text-align: center;
+  margin-top: 55px;
+  color: white;
+  padding: 40px;
+}
 
-  .row h2 {
-    margin-left:47%;
-    margin-top: 65px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  }
+#sobre_deni{
+  background: #ffffff; 
+  border-radius: 6px; 
+  padding: 15px;
+  cursor: pointer; 
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgba(70, 6, 112, 0.472);
+}
 
-  .column h3{
-    font-family: 'Courier New', Courier, monospace; 
-    margin-top: 15px;
-    text-align: center;
-    margin-left: -60%;
-  }
-  
+#sobre_anna{
+  background:  #ffffff;
+   border-radius: 6px; 
+   padding: 15px; 
+   cursor: pointer; 
+   font-size: 20px; 
+   margin-left: 15%; 
+   margin-right: 15%;
+   margin-bottom: 10px;
+   box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+
+#sobre_artur{    
+  background: #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_jason{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_mateus{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_nicolas{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 5px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+
+.painelLogin{
+  width: 30%;
+  margin: auto;
+  display: flex;
+}
+.nomes{
+  width: 30%;
+  margin: auto;
+  display: flex;
+}
+
   /* Clearfix (clear floats) */
   .row::after {
     content: "";
     clear: both;
     display: table;
   }
-  
-  .button {
-    background-color: rgb(70, 6, 112);
-    border: none;
-    color: white;
-    padding: 15px 42px;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
   /* final do CSS dos contatos dos develops */
+
   .bandeira1{
   height:30px;
   width:30px;
@@ -186,16 +239,14 @@
     align-items: center;
     margin: 50px;
   }
-  /* .numero_pequeno{
-
-  } */
+  
   .numero_grande{
     margin-left:10px ;
     font-size: 30px;
     color: #460670;
   }
   .btn_clacular{
-    border:2px solid #811dc4;
+    border:1px solid black;
     height:32px;
     width: 30px;
     margin-top: 1px;
@@ -203,13 +254,33 @@
     border-radius: 3px ;
     font-size: 20px;
     text-align: center;
-    color: blueviolet;
+    color: rgb(70, 6, 112);
   }
   .btn_clacular:hover{
     background-color: #460670;
     color: white;
 
   }
+  .quadrado_input{
+    border: 1px solid rgb(70, 6, 112);
+    border-radius: 3px ;
+  }
+
+  .quadrado2{
+    border:1px solid rgba(188, 150, 209, 0.431);
+    border-radius: 3px ;
+  }
+  .quadrado2:hover{
+    border: 1px solid rgb(70, 6, 112);
+  }
+  .quadrado3{
+    border:1px solid rgba(188, 150, 209, 0.431);
+    border-radius: 3px ;
+  }
+  .quadrado3:hover{
+    border: 1px solid rgb(70, 6, 112);
+  }
+
   .flex{
     display: flex;
   }
@@ -221,7 +292,8 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black
   }
-.da_moeda{
+  .da_moeda{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
+
