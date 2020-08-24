@@ -1,7 +1,7 @@
 /* CSS da Ana */
 
 .nomeIbovespa{
-    margin-top: 5px;
+    margin-top: 50px;
     width: 300px;
     margin-left: 15px;
     color:rgb(70, 6, 112);
@@ -71,6 +71,22 @@
   }
   .seta{
     margin-left: 10px;
+  }
+
+  .moedas2{
+    display: flex;
+    margin-top: 85px;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .moedas2{
+      flex-direction: column;
+
+    }
+  }
+  .bi-chevron-right{
+    color: rgb(70, 6, 112);
   }
 
 
@@ -170,9 +186,9 @@
     align-items: center;
     margin: 50px;
   }
-  .numero_pequeno{
+  /* .numero_pequeno{
 
-  }
+  } */
   .numero_grande{
     margin-left:10px ;
     font-size: 30px;
@@ -198,17 +214,14 @@
     display: flex;
   }
   .colocar_valor{
-    font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black
   }
   .para_moeda{
-    font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black
   }
 .da_moeda{
-  font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
