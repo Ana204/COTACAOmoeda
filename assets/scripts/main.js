@@ -426,8 +426,8 @@ const options = {
 
 
 
-        async function AtivosEmAlta (){
-            fetch(`http://localhost:3000/ativosemAlta`, options)
+        async function Ativos (url, id){
+            fetch(url, options)
             .then ((res) => { 
                 res = res.json()
                 
@@ -436,12 +436,12 @@ const options = {
             .then((res2) => { 
                 //console.log(`teste da ana`)
               //console.log(res2.ativosemAlta[5])  
-              setRult(res2)
+              setRult(res2, id)
             })
         }
-        function setRult(dado) {
+        function setRult(dado, id) {
 
-            let tabela = document.getElementById("Ativos")
+            let tabela = document.getElementById(id)
 
             dado.map((item) => {
 
@@ -474,7 +474,7 @@ const options = {
         
 
             
-
+        //Referencia para criar o elemento com o creatElement
         //  <tr>
         //     <th scope="row">YDUQ3</th>
         //     <td>R$31,4</td>
@@ -484,7 +484,11 @@ const options = {
         //   </tr>
         }
 
-        AtivosEmAlta()
+        //chamando as funcoes para montar a tabela de ativos
+        //primeiro parametro: pasando o json com as informacoes
+        //segundo parametro pasando o id da div onde as informacoes seram renderizadas
+        Ativos('http://localhost:3000/ativosemAlta', "Ativos" )
+        Ativos('http://localhost:3000/ativosemBaixa', "Ativos_baixa")
 
  
         

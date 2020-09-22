@@ -275,5 +275,421 @@
       "data": "15:09 19/08",
       "id": 33
     }
+  ],
+  "ativosemBaixa": [
+    {
+      "ativo": "YDUQ3",
+      "ultimo": "31,4",
+      "varDia": -1.21,
+      "valMin": "30,8",
+      "valMax": "32,25",
+      "data": "15:09 19/08",
+      "id": 2
+    },
+    {
+      "ativo": "WEGE3",
+      "ultimo": "67,7",
+      "varDia": -1.54,
+      "valMin": "66,3",
+      "valMax": "68,45",
+      "data": "15:09 19/08",
+      "id": 3
+    },
+    {
+      "ativo": "VIVT4",
+      "ultimo": "49,91",
+      "varDia": -0.3,
+      "valMin": "48,72",
+      "valMax": "49,82",
+      "data": "15:09 19/08",
+      "id": 4
+    },
+    {
+      "ativo": "VALE3",
+      "ultimo": "63,06",
+      "varDia": -0.02,
+      "valMin": "62,77",
+      "valMax": "63,88",
+      "data": "15:09 19/08",
+      "id": 5
+    },
+    {
+      "ativo": "TOTS3",
+      "ultimo": 28,
+      "varDia": -0.29,
+      "valMin": "27,39",
+      "valMax": "28,33",
+      "data": "15:09 19/08",
+      "id": 6
+    },
+    {
+      "ativo": "TIMP3",
+      "ultimo": "14,87",
+      "varDia": -0.67,
+      "valMin": "14,54",
+      "valMax": "14,81",
+      "data": "15:09 19/08",
+      "id": 7
+    },
+    {
+      "ativo": "SUZB3",
+      "ultimo": 52,
+      "varDia": -0.85,
+      "valMin": "51,5",
+      "valMax": "53,75",
+      "data": "15:09 19/08",
+      "id": 8
+    },
+    {
+      "ativo": "SULA11",
+      "ultimo": "48,46",
+      "varDia": -2.79,
+      "valMin": "46,82",
+      "valMax": "48,62",
+      "data": "15:09 19/08",
+      "id": 9
+    },
+    {
+      "ativo": "SBSP3",
+      "ultimo": "55,55",
+      "varDia": -5.9,
+      "valMin": "49,6",
+      "valMax": "55,52",
+      "data": "15:09 19/08",
+      "id": 10
+    },
+    {
+      "ativo": "RENT3",
+      "ultimo": "49,6",
+      "varDia": -0.73,
+      "valMin": "48,49",
+      "valMax": "49,69",
+      "data": "15:09 19/08",
+      "id": 11
+    },
+    {
+      "ativo": "RADL3",
+      "ultimo": "110,95",
+      "varDia": -1.57,
+      "valMin": "109,07",
+      "valMax": "111,99",
+      "data": "15:09 19/08",
+      "id": 12
+    },
+    {
+      "ativo": "QUAL3",
+      "ultimo": "28,39",
+      "varDia": -1.2,
+      "valMin": "27,85",
+      "valMax": "28,52",
+      "data": "15:09 19/08",
+      "id": 13
+    },
+    {
+      "ativo": "PCAR3",
+      "ultimo": "65,31",
+      "varDia": -1.96,
+      "valMin": "63,86",
+      "valMax": "65,63",
+      "data": "15:09 19/08",
+      "id": 14
+    },
+    {
+      "ativo": "NTCO3",
+      "ultimo": "51,4",
+      "varDia": -0.54,
+      "valMin": "50,46",
+      "valMax": "51,76",
+      "data": "15:09 19/08",
+      "id": 15
+    },
+    {
+      "ativo": "MULT3",
+      "ultimo": "21,84",
+      "varDia": -1.97,
+      "valMin": "21,16",
+      "valMax": "21,92",
+      "data": "15:09 19/08",
+      "id": 16
+    },
+    {
+      "ativo": "MRVE3",
+      "ultimo": "18,8",
+      "varDia": -0.43,
+      "valMin": "18,46",
+      "valMax": "19,01",
+      "data": "15:09 19/08",
+      "id": 17
+    },
+    {
+      "ativo": "MGLU3",
+      "ultimo": "89,5",
+      "varDia": -0.4,
+      "valMin": "88,22",
+      "valMax": "90,23",
+      "data": "15:09 19/08",
+      "id": 18
+    },
+    {
+      "ativo": "LREN3",
+      "ultimo": "41,31",
+      "varDia": -3.05,
+      "valMin": "39,47",
+      "valMax": "41,68",
+      "data": "15:09 19/08",
+      "id": 19
+    },
+    {
+      "ativo": "LAME4",
+      "ultimo": "33,68",
+      "varDia": -2.7,
+      "valMin": "32,6",
+      "valMax": "33,97",
+      "data": "15:09 19/08",
+      "id": 20
+    },
+    {
+      "ativo": "IRBR3",
+      "ultimo": "7,55",
+      "varDia": -4.24,
+      "valMin": "7,17",
+      "valMax": "7,58",
+      "data": "15:09 19/08",
+      "id": 21
+    },
+    {
+      "ativo": "IGTA3",
+      "ultimo": "33,72",
+      "varDia": -1.04,
+      "valMin": "32,7",
+      "valMax": "33,79",
+      "data": "15:09 19/08",
+      "id": 22
+    },
+    {
+      "ativo": "HYPE3",
+      "ultimo": "32,88",
+      "varDia": -2.13,
+      "valMin": "31,8",
+      "valMax": "32,65",
+      "data": "15:09 19/08",
+      "id": 23
+    },
+    {
+      "ativo": "HAPV3",
+      "ultimo": "62,93",
+      "varDia": -0.44,
+      "valMin": "61,8",
+      "valMax": "63,21",
+      "data": "15:09 19/08",
+      "id": 24
+    },
+    {
+      "ativo": "GOLL4",
+      "ultimo": "18,14",
+      "varDia": -1.54,
+      "valMin": "17,73",
+      "valMax": "18,32",
+      "data": "15:09 19/08",
+      "id": 25
+    },
+    {
+      "ativo": "GNDI3",
+      "ultimo": 67,
+      "varDia": -1.39,
+      "valMin": "65,3",
+      "valMax": "67,27",
+      "data": "15:09 19/08",
+      "id": 26
+    },
+    {
+      "ativo": "FLRY3",
+      "ultimo": "24,99",
+      "varDia": -0.6,
+      "valMin": "24,5",
+      "valMax": "25,29",
+      "data": "15:09 19/08",
+      "id": 27
+    },
+    {
+      "ativo": "EQTL3",
+      "ultimo": "23,96",
+      "varDia": -1.67,
+      "valMin": "23,41",
+      "valMax": "23,93",
+      "data": "15:09 19/08",
+      "id": 28
+    },
+    {
+      "ativo": "ENGI11",
+      "ultimo": "44,82",
+      "varDia": -0.69,
+      "valMin": "43,96",
+      "valMax": "45,18",
+      "data": "15:09 19/08",
+      "id": 29
+    },
+    {
+      "ativo": "ENBR3",
+      "ultimo": "17,55",
+      "varDia": -0.34,
+      "valMin": "17,3",
+      "valMax": "17,6",
+      "data": "15:09 19/08",
+      "id": 30
+    },
+    {
+      "ativo": "EMBR3",
+      "ultimo": "7,39",
+      "varDia": -2.3,
+      "valMin": "7,16",
+      "valMax": "7,43",
+      "data": "15:09 19/08",
+      "id": 31
+    },
+    {
+      "ativo": "ELET6",
+      "ultimo": "34,36",
+      "varDia": -2.76,
+      "valMin": "32,93",
+      "valMax": "34,6",
+      "data": "15:09 19/08",
+      "id": 32
+    },
+    {
+      "ativo": "ELET3",
+      "ultimo": "32,58",
+      "varDia": -2,
+      "valMin": "31,33",
+      "valMax": "32,7",
+      "data": "15:09 19/08",
+      "id": 33
+    },
+    {
+      "ativo": "EGIE3",
+      "ultimo": "43,29",
+      "varDia": -0.12,
+      "valMin": "42,45",
+      "valMax": "43,37",
+      "data": "15:09 19/08",
+      "id": 34
+    },
+    {
+      "ativo": "CYRE3",
+      "ultimo": "24,33",
+      "varDia": -1.64,
+      "valMin": "23,56",
+      "valMax": "24,34",
+      "data": "15:09 19/08",
+      "id": 35
+    },
+    {
+      "ativo": "CVCB3",
+      "ultimo": "19,34",
+      "varDia": -1.24,
+      "valMin": "18,88",
+      "valMax": "19,6",
+      "data": "15:09 19/08",
+      "id": 36
+    },
+    {
+      "ativo": "CSAN3",
+      "ultimo": "85,17",
+      "varDia": -1.33,
+      "valMin": "83,33",
+      "valMax": "85,28",
+      "data": "15:09 19/08",
+      "id": 37
+    },
+    {
+      "ativo": "CRFB3",
+      "ultimo": "20,07",
+      "varDia": -1,
+      "valMin": "19,61",
+      "valMax": "20,1",
+      "data": "15:09 19/08",
+      "id": 38
+    },
+    {
+      "ativo": "CPFE3",
+      "ultimo": "29,89",
+      "varDia": -1.64,
+      "valMin": "29,25",
+      "valMax": "29,94",
+      "data": "15:09 19/08",
+      "id": 39
+    },
+    {
+      "ativo": "COGN3",
+      "ultimo": "6,96",
+      "varDia": -4.17,
+      "valMin": "6,44",
+      "valMax": "6,93",
+      "data": "15:09 19/08",
+      "id": 40
+    },
+    {
+      "ativo": "BTOW3",
+      "ultimo": "114,4",
+      "varDia": -1.39,
+      "valMin": "111,75",
+      "valMax": "114,8",
+      "data": "15:09 19/08",
+      "id": 41
+    },
+    {
+      "ativo": "BRML3",
+      "ultimo": "9,75",
+      "varDia": -1.54,
+      "valMin": "9,36",
+      "valMax": "9,75",
+      "data": "15:09 19/08",
+      "id": 42
+    },
+    {
+      "ativo": "BPAC11",
+      "ultimo": "85,71",
+      "varDia": -1.27,
+      "valMin": "83,94",
+      "valMax": "85,6",
+      "data": "15:09 19/08",
+      "id": 43
+    },
+    {
+      "ativo": "BBSE3",
+      "ultimo": "27,02",
+      "varDia": -0.04,
+      "valMin": "26,6",
+      "valMax": "27,23",
+      "data": "15:09 19/08",
+      "id": 44
+    },
+    {
+      "ativo": "B3SA3",
+      "ultimo": "61,8",
+      "varDia": -1.84,
+      "valMin": "60,11",
+      "valMax": "62,11",
+      "data": "15:09 19/08",
+      "id": 45
+    },
+    {
+      "ativo": "AZUL4",
+      "ultimo": "21,8",
+      "varDia": -0.05,
+      "valMin": "21,62",
+      "valMax": "22,12",
+      "data": "15:09 19/08",
+      "id": 46
+    },
+    {
+      "ativo": "ABEV3",
+      "ultimo": "13,08",
+      "varDia": -1.15,
+      "valMin": "12,9",
+      "valMax": "13,2",
+      "data": "15:09 19/08",
+      "id": 47
+    }
   ]
 }
