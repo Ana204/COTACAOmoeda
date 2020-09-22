@@ -8,14 +8,22 @@ const options = {
     renderizarInfoDasMoedas('nome_moeda_1', 'porcentagem_moeda_1', 'preco_moeda_1','USD',"Dólar Comercial")
     renderizarInfoDasMoedas('nome_moeda_2', 'porcentagem_moeda_2', 'preco_moeda_2','BTC',"Bitcoin")
     renderizarInfoDasMoedas('nome_moeda_3', 'porcentagem_moeda_3', 'preco_moeda_3','EUR',"Euro")
+    renderizarInfoDasMoedas('nome_moeda_4', 'porcentagem_moeda_4', 'preco_moeda_4','GBP',"Libra Esterlina")
+    renderizarInfoDasMoedas('nome_moeda_5', 'porcentagem_moeda_5', 'preco_moeda_5','ARS',"Peso Argentino")
+    renderizarInfoDasMoedas('nome_moeda_6', 'porcentagem_moeda_6', 'preco_moeda_6','ETH',"Ethereum")
+    
     
     // renderizarInfoDasMoedas('GBP');
     // renderizarInfoDasMoedas('EUR');
 
     //chamando a função para renderizar os graficos das moedas.
     rederizarGraficosMoedas('dolar','USD')
-    rederizarGraficosMoedas('libra','BTC')
+    rederizarGraficosMoedas('bitcoin','BTC')
     rederizarGraficosMoedas('euro','EUR')
+    rederizarGraficosMoedas('libra','GBP')
+    rederizarGraficosMoedas('peso','ARS')
+    rederizarGraficosMoedas('ethe','ETH')
+    
 
     adicionandoMoedasNaDropDanw();
 
@@ -81,6 +89,21 @@ const options = {
 
                 });
 
+                //Adicionando a Moeda BRL, porque não tem na API 
+
+                // let moeda_BRL = document.createElement('option')
+                // moeda_BRL.setAttribute("value", "BRL")
+                // let text2 = document.createTextNode("BRL(Real Brasil)")
+                // moeda_BRL.appendChild(text2)
+
+                // select.appendChild(moeda_BRL)
+
+                // let moeda_BRL2 = document.createElement('option')
+                // moeda_BRL2.setAttribute("value", "BRL")
+                // let text22 = document.createTextNode("BRL(Real Brasil)")
+                // moeda_BRL2.appendChild(text22)
+
+                // select2.appendChild(moeda_BRL2)
                 
 
             }
@@ -130,18 +153,23 @@ const options = {
                     }
                 });
                 
-                let result = dados_da_moeda1.bid/dados_da_moeda2.bid
+                let cambio = dados_da_moeda1.bid/dados_da_moeda2.bid
+
+                let result = cambio * valor
 
                 valor_menor = document.getElementById("numero_pequeno")
                 valor_maior = document.getElementById("numero_grande")
 
-                alert(valor_maior)
+                alert(valor_maior.innerHTML)
 
-                result_valor_menor = dados_da_moeda1.code + " " + valor
-                result_valor_maior = dados_da_moeda2.code + " " + result
+                result_valor_menor = dados_da_moeda1.code + " " + valor + " ="
+                result_valor_maior = dados_da_moeda2.code + " " + result.toFixed(2)
 
-                valor_menor.text = result_valor_menor
-                valor_maior.text = result_valor_maior
+                valor_menor.innerHTML = result_valor_menor
+                valor_maior.innerHTML = result_valor_maior
+
+                result = ""
+                result_valor_maior = ""
             }
             
             
@@ -295,7 +323,7 @@ const options = {
                         var chartGraph = new Chart(ctx, {
                             type: 'line',
                             data: {
-                            labels: ["10","9","8","7","5","6","7","8","9","10","11","12","13"],
+                            labels: ["-9","-8","-7","-6","-5","-4","-3","-2","-1","Ontem","+1","+2","+3"],
                             datasets: [
                             {
                     
@@ -369,7 +397,7 @@ const options = {
                     datasets: [
                     {
             
-                        label: "Euro",
+                        label: "",
                         data: dados,
                         borderWidth: 3,
                         borderColor: '#000000',
@@ -393,6 +421,7 @@ const options = {
 
  //------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
         export function TesteSoma(num1, num2) {
             let result
             return result = num1 + num2
@@ -465,3 +494,115 @@ const options = {
 
  
         
+=======
+ 
+function setarBandeira(event) {
+
+    
+    moeda_ID = document.getElementById(event.target.id)
+    moeda = moeda_ID.value
+
+    fetch('https://economia.awesomeapi.com.br/all', options)
+            .then(response => {
+                if(!response.ok) throw new Error('Erro ao executar requisição')
+                console.log(response.ok)
+                return response.json();
+            })
+            .then(data => {
+                escrever(data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+            function escrever(data){
+                dadosAPI = []
+                
+
+                //Convertendo o objeto em array
+                dadosAPI = Object.values(data)
+
+                dadosAPI.forEach(element => {
+                    if(element.code == moeda){
+                        let nome = moeda+".png"
+
+                        let bandeira = document.getElementById("bandeira1")
+
+                        bandeira.innerText = ""
+
+                        let imagem_da_bandeira = document.createElement("img")
+                        imagem_da_bandeira.setAttribute("src", "assets/images/"+nome)
+                        imagem_da_bandeira.setAttribute("width", "60px")
+                        imagem_da_bandeira.setAttribute("height", "30px")
+
+                        bandeira.appendChild(imagem_da_bandeira)
+                        
+                    }
+                    
+                });
+
+
+
+
+
+            }
+
+            
+}
+
+function setarBandeira2(event) {
+
+    
+    moeda_ID = document.getElementById(event.target.id)
+    moeda = moeda_ID.value
+
+    fetch('https://economia.awesomeapi.com.br/all', options)
+            .then(response => {
+                if(!response.ok) throw new Error('Erro ao executar requisição')
+                console.log(response.ok)
+                return response.json();
+            })
+            .then(data => {
+                escrever(data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+            function escrever(data){
+                dadosAPI = []
+                
+
+                //Convertendo o objeto em array
+                dadosAPI = Object.values(data)
+
+                dadosAPI.forEach(element => {
+                    if(element.code == moeda){
+                        let nome = moeda+".png"
+
+                        let bandeira = document.getElementById("bandeira2")
+
+                        bandeira.innerText = ""
+
+                        let imagem_da_bandeira = document.createElement("img")
+                        imagem_da_bandeira.setAttribute("src", "assets/images/"+nome)
+                        imagem_da_bandeira.setAttribute("width", "60px")
+                        imagem_da_bandeira.setAttribute("height", "30px")
+
+                        bandeira.appendChild(imagem_da_bandeira)
+                        
+                    }
+                    
+                });
+
+
+
+
+
+            }
+
+            
+}
+>>>>>>> 273a71da36dc0b5576df0e914e11e46e7a832462

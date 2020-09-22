@@ -1,7 +1,7 @@
 /* CSS da Ana */
 
 .nomeIbovespa{
-    margin-top: 5px;
+    margin-top: 50px;
     width: 300px;
     margin-left: 15px;
     color:rgb(70, 6, 112);
@@ -73,13 +73,135 @@
     margin-left: 10px;
   }
 
+  .moedas2{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 85px;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .moedas2{
+      flex-direction: column;
+
+    }
+  }
+  .bi-chevron-right{
+    color: rgb(70, 6, 112);
+  }
+
+
+/* CSS dos contatos dos develops */
+
+#contatos{
+  text-align: center;
+  margin-top: 55px;
+  color: rgb(70, 6, 112);
+  padding: 40px;
+}
+.devs{
+  text-align: center;
+  margin-top: 55px;
+  color: white;
+  padding: 40px;
+}
+
+#sobre_deni{
+  background: #ffffff; 
+  border-radius: 6px; 
+  padding: 15px;
+  cursor: pointer; 
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgba(70, 6, 112, 0.472);
+}
+
+#sobre_anna{
+  background:  #ffffff;
+   border-radius: 6px; 
+   padding: 15px; 
+   cursor: pointer; 
+   font-size: 20px; 
+   margin-left: 15%; 
+   margin-right: 15%;
+   margin-bottom: 10px;
+   box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+
+#sobre_artur{    
+  background: #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_jason{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_mateus{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+#sobre_nicolas{
+  background:  #ffffff;
+  border-radius: 6px; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-bottom: 5px;
+  box-shadow: 3px 3px rgb(70, 6, 112,0.472);
+}
+
+.painelLogin{
+  width: 30%;
+  margin: auto;
+  display: flex;
+}
+.nomes{
+  width: 30%;
+  margin: auto;
+  display: flex;
+}
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /* final do CSS dos contatos dos develops */
+
   .bandeira1{
   height:30px;
-  width:30px;
+  width:50px;
   border-radius:15px;
-  background-color:red;
+  background-color:#490a728e;
   margin-right:10px;
   margin-left: 5px;
+  overflow: hidden;
   }
   .form_converçao{
   display:flex
@@ -119,16 +241,14 @@
     align-items: center;
     margin: 50px;
   }
-  .numero_pequeno{
-
-  }
+  
   .numero_grande{
     margin-left:10px ;
     font-size: 30px;
     color: #460670;
   }
   .btn_clacular{
-    border:2px solid #811dc4;
+    border:1px solid black;
     height:32px;
     width: 30px;
     margin-top: 1px;
@@ -136,28 +256,53 @@
     border-radius: 3px ;
     font-size: 20px;
     text-align: center;
-    color: blueviolet;
+    color: rgb(70, 6, 112);
   }
   .btn_clacular:hover{
     background-color: #460670;
     color: white;
 
   }
+  .quadrado_input{
+    border: 1px solid rgb(70, 6, 112);
+    border-radius: 3px ;
+  }
+
+  .quadrado2{
+    border:1px solid rgba(188, 150, 209, 0.431);
+    border-radius: 3px ;
+  }
+  .quadrado2:hover{
+    border: 1px solid rgb(70, 6, 112);
+  }
+  .quadrado3{
+    border:1px solid rgba(188, 150, 209, 0.431);
+    border-radius: 3px ;
+  }
+  .quadrado3:hover{
+    border: 1px solid rgb(70, 6, 112);
+  }
+
   .flex{
     display: flex;
   }
   .colocar_valor{
-    font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black
   }
   .para_moeda{
-    font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black
   }
-.da_moeda{
-  font-size: 24px;
+  .da_moeda{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
+<<<<<<< HEAD
+
+=======
+.set_cor{
+  background-color: #460670 !important; 
+  color: #460670 !important;
+}
+>>>>>>> 688c7e83be64e4d76a2abea44e63ecffced70677
