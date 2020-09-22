@@ -392,3 +392,76 @@ const options = {
         }
 
  //------------------------------------------------------------------------------------
+
+        export function TesteSoma(num1, num2) {
+            let result
+            return result = num1 + num2
+        }
+
+        //==================================================================================================
+        let resultado
+
+
+
+        async function AtivosEmAlta (){
+            fetch(`http://localhost:3000/ativosemAlta`, options)
+            .then ((res) => { 
+                res = res.json()
+                
+                return res 
+            })
+            .then((res2) => { 
+                //console.log(`teste da ana`)
+              //console.log(res2.ativosemAlta[5])  
+              setRult(res2)
+            })
+        }
+        function setRult(dado) {
+
+            let tabela = document.getElementById("Ativos")
+
+            dado.map((item) => {
+
+                let linha = document.createElement('tr')
+                let coluna_1 = document.createElement('th')
+                coluna_1.setAttribute("scope", "row")
+                coluna_1.innerHTML = item.ativo
+
+                let coluna_2 = document.createElement('td')
+                coluna_2.innerHTML = item.valMax
+
+                let coluna_3 = document.createElement('td')
+                coluna_3.innerHTML = item.varDia
+
+                let coluna_4 = document.createElement('td')
+                coluna_4.innerHTML = item.valMin
+
+                let coluna_5 = document.createElement('td')
+                coluna_5.innerHTML = item.valMax
+
+                linha.appendChild(coluna_1)
+                linha.appendChild(coluna_2)
+                linha.appendChild(coluna_3)
+                linha.appendChild(coluna_4)
+                linha.appendChild(coluna_5)
+
+                tabela.appendChild(linha)
+
+            } )
+        
+
+            
+
+        //  <tr>
+        //     <th scope="row">YDUQ3</th>
+        //     <td>R$31,4</td>
+        //     <td>-1,21%</td>
+        //     <td>R$30,25</td>
+        //     <td>R$32,25</td>
+        //   </tr>
+        }
+
+        AtivosEmAlta()
+
+ 
+        
