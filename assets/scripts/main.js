@@ -359,9 +359,9 @@ const options = {
 
     //Conectando com a API DO INDICE BOOVESP
 
-    fetch('https://v2-api.sheety.co/2ac728626639f7e8772ca31394a909ae/%C3%ADndiceBovespa/bovespa', options)
+    fetch(`https://api.sheety.co/4ab649c7ce6367df9437a288b09ed6f4/indiceBovespa/bovespa`, options)
         .then(response => {
-            if(!response.ok) throw new Error("o cominicação com a API falhou")
+            if(!response.ok) throw new Error("o comunicação com a API falhou")
             return response.json();
         })
         .then(data => {
@@ -376,6 +376,8 @@ const options = {
             BOVESP = []
             datasBOVESP = []
             dadosBOVESP = []
+            console.log("teste do denison")
+            console.log(date)
             BOVESP = Object.values(date)
 
             BOVESP[0].forEach(element => {
@@ -419,16 +421,8 @@ const options = {
             }   
         }
 
- //------------------------------------------------------------------------------------
-
-<<<<<<< HEAD
-        export function TesteSoma(num1, num2) {
-            let result
-            return result = num1 + num2
-        }
 
         //==================================================================================================
-        let resultado
 
 
 
@@ -494,7 +488,6 @@ const options = {
 
  
         
-=======
  
 function setarBandeira(event) {
 
@@ -605,4 +598,3 @@ function setarBandeira2(event) {
 
             
 }
->>>>>>> 273a71da36dc0b5576df0e914e11e46e7a832462
