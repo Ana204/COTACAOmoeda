@@ -66,7 +66,6 @@ const options = {
                     let text = document.createTextNode(nome_da_moeda)
                     moeda.appendChild(text) 
 
-                    console.log(nome_da_moeda)
 
                     select.appendChild(moeda)
 
@@ -82,7 +81,6 @@ const options = {
                         let text = document.createTextNode(nome_da_moeda)
                         moeda.appendChild(text) 
 
-                        console.log(nome_da_moeda)
 
                         select2.appendChild(moeda)
 
@@ -228,7 +226,6 @@ const options = {
                         nomesDasMoedas = nomesDasMoedas[0]
                     }
 
-                    console.log(nomesDasMoedas)
 
                     //pegando elemento na HTML para setar conforme a moeda
 
@@ -245,7 +242,6 @@ const options = {
                     function setCorAndSinal() {
                         let nume_em_porcent = parseFloat(nomesDasMoedas.pctChange)
                         
-                        console.log("porcentagem" + nume_em_porcent + nomesDasMoedas.pctChange)
                         if(nume_em_porcent < 0){
                             let sinal = "-"
                             area_porcentagem.setAttribute("style","background-color:red")
@@ -304,8 +300,6 @@ const options = {
                         //gerar o géafico no html
                         let bidDosDias = []
 
-
-                        console.log(dadosDaApi)
 
 
 
@@ -376,8 +370,6 @@ const options = {
             BOVESP = []
             datasBOVESP = []
             dadosBOVESP = []
-            console.log("teste do denison")
-            console.log(date)
             BOVESP = Object.values(date)
 
             BOVESP[0].forEach(element => {
@@ -451,7 +443,7 @@ const options = {
                 coluna_1.innerHTML = item.ativo
 
                 let coluna_2 = document.createElement('td')
-                coluna_2.innerHTML = item.valMax
+                coluna_2.innerHTML = item.ultimo    
 
                 let coluna_3 = document.createElement('td')
                 coluna_3.innerHTML = item.varDia
@@ -461,12 +453,17 @@ const options = {
 
                 let coluna_5 = document.createElement('td')
                 coluna_5.innerHTML = item.valMax
+                
+
+                let coluna_6 = document.createElement('td')
+                coluna_6.innerHTML = item.id
 
                 linha.appendChild(coluna_1)
                 linha.appendChild(coluna_2)
                 linha.appendChild(coluna_3)
                 linha.appendChild(coluna_4)
                 linha.appendChild(coluna_5)
+                linha.appendChild(coluna_6)
 
                 tabela.appendChild(linha)
 
@@ -602,3 +599,174 @@ function setarBandeira2(event) {
 
             
 }
+        function adicionarAtivosAlta() {
+
+            let nome_do_ativo = document.getElementById("nome_ativo").value
+            let ultimo_valor = document.getElementById("ultimo").value
+            let var_dia = document.getElementById("variacao_dia").value
+            let minimo = document.getElementById("valor_minimo").value
+            let maximo = document.getElementById("valor_maximo").value
+            let data_ativo = document.getElementById("data_ativo").value
+
+
+            fetch(`http://localhost:3000/ativosemAlta`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        ativo:nome_do_ativo,
+                        ultimo: ultimo_valor,
+                        varDia: var_dia,
+                        valMin: minimo,
+                        valMax: maximo,
+                        data: data_ativo
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+
+            
+        }
+
+        function adicionarAtivosBaixa() {
+
+            let nome_do_ativo = document.getElementById("nome_ativo2").value
+            let ultimo_valor = document.getElementById("ultimo2").value
+            let var_dia = document.getElementById("variacao_dia2").value
+            let minimo = document.getElementById("valor_minimo2").value
+            let maximo = document.getElementById("valor_maximo2").value
+            let data_ativo = document.getElementById("data_ativo2").value
+
+
+            fetch(`http://localhost:3000/ativosemBaixa`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        ativo:nome_do_ativo,
+                        ultimo: ultimo_valor,
+                        varDia: var_dia,
+                        valMin: minimo,
+                        valMax: maximo,
+                        data: data_ativo
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+
+            
+        }
+
+        function excluirAtivo() {
+            let ativo = document.getElementById("excluir").value
+            
+
+            let url = 'http://localhost:3000/ativosemAlta/' + String(ativo)
+
+
+            fetch(url, {
+               method: 'DELETE'
+            })
+        }
+
+        function excluirAtivo_baixa() {
+            let ativo = document.getElementById("excluirBaixa").value
+            
+
+            let url = 'http://localhost:3000/ativosemBaixa/' + String(ativo)
+
+
+            fetch(url, {
+               method: 'DELETE'
+            })
+        }
+
+        function atualizarAtivo() {
+
+            let nome_do_ativo = document.getElementById("nome_ativo3").value
+            let ultimo_valor = document.getElementById("ultimo3").value
+            let var_dia = document.getElementById("variacao_dia3").value
+            let minimo = document.getElementById("valor_minimo3").value
+            let maximo = document.getElementById("valor_maximo3").value
+            let data_ativo = document.getElementById("data_ativo3").value
+            let id = document.getElementById("atualizar").value
+
+            let url = `http://localhost:3000/ativosemAlta/` + String(id)
+
+            fetch(url, {
+                    method: 'PUT',
+                    body: JSON.stringify({
+                        ativo:nome_do_ativo,
+                        ultimo: ultimo_valor,
+                        varDia: var_dia,
+                        valMin: minimo,
+                        valMax: maximo,
+                        data: data_ativo
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+
+            
+        }
+
+        function atualizarAtivo2() {
+
+            let nome_do_ativo = document.getElementById("nome_ativo4").value
+            let ultimo_valor = document.getElementById("ultimo4").value
+            let var_dia = document.getElementById("variacao_dia4").value
+            let minimo = document.getElementById("valor_minimo4").value
+            let maximo = document.getElementById("valor_maximo4").value
+            let data_ativo = document.getElementById("data_ativo4").value
+            let id = document.getElementById("atualizar2").value
+
+            let url = `http://localhost:3000/ativosemBaixa/` + String(id)
+
+            fetch(url, {
+                    method: 'PUT',
+                    body: JSON.stringify({
+                        ativo:nome_do_ativo,
+                        ultimo: ultimo_valor,
+                        varDia: var_dia,
+                        valMin: minimo,
+                        valMax: maximo,
+                        data: data_ativo
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+
+            
+        }
+
+        function toggleEdit() {
+            var element = document.getElementById("edit--ativoAlta");
+            var btn = document.getElementById("btn_edit");
+
+
+            element.classList.toggle("sumir");
+            element.classList.toggle("info_edit");
+
+            btn.classList.toggle("btn_edit")
+            btn.classList.toggle("btn_edit_off")
+        }
+
+        function toggleEdit2() {
+            var element = document.getElementById("edit--ativoAlta2");
+            var btn = document.getElementById("btn_edit2");
+
+
+            element.classList.toggle("sumir");
+            element.classList.toggle("info_edit");
+
+            btn.classList.toggle("btn_edit")
+            btn.classList.toggle("btn_edit_off")
+        }

@@ -302,11 +302,54 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
-<<<<<<< HEAD
-
-=======
 .set_cor{
   background-color: #460670 !important; 
   color: #460670 !important;
 }
->>>>>>> 688c7e83be64e4d76a2abea44e63ecffced70677
+.btn_edit{
+  width: 150px;
+  text-align: center;
+  margin-left: 30px;
+  margin-bottom:-15px ;
+  position: relative;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-right: 5px solid #61019E;
+  border-left: 5px solid #61019E;
+  border-top: 1px solid #61019E;
+  border-bottom: 1px solid #61019E;
+  border-radius: 15px 15px 15px 15px;
+  text-transform: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn_edit_off{
+  width: 150px;
+  text-align: center;
+  margin-left: 30px;
+  margin-bottom:-15px ;
+  position: relative;
+  font-size: 18px;
+  background-color: #61019E;
+  color: #ffffff;
+  border-right: 5px solid #61019E;
+  border-left: 5px solid #61019E;
+  border-top: 1px solid #61019E;
+  border-bottom: 1px solid #61019E;
+  border-radius: 15px 15px 15px 15px;
+  text-transform: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+.sumir{
+  height: 0px;
+  border: none;
+  overflow: hidden;
+}
+.info_edit {
+  border: 2px solid #460670; 
+  border-radius: 3px; 
+  padding: 15px; 
+  margin-bottom: 30px; 
+  overflow:hidden; 
+}

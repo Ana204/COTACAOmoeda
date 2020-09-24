@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/style.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   
   
   
@@ -396,8 +397,10 @@
         </div>
     </div>
     </section>
-    <section>
 
+
+    <!--Tabela do ativos em alta-->
+    <section>
       <div class="Titilos">
         <h3>Ativos em alta</h3> 
         <div class="arrow">
@@ -416,22 +419,166 @@
               <th scope="col">Variacao Diaria</th>
               <th scope="col">Valor Minimo</th>
               <th scope="col">Valor Maximo</th>
+              <th scope="col">ID</th>
             </tr>
           </thead>
           <tbody id="Ativos">
             <tr>
-              <th scope="row">YDUQ3</th>
-              <td>R$31,4</td>
-              <td>-1,21%</td>
-              <td>R$30,25</td>
-              <td>R$32,25</td>
+
             </tr>
           </tbody>
         </table>
       </div>
-
-
     </section>
+
+    <!--Adicionar ativos em alta-->
+    <div class="btn_edit_off" id="btn_edit2" onclick="toggleEdit2()"><strong>Editar ativos</strong></div>
+    <div id="edit--ativoAlta2" class="sumir">
+    <section style="margin-bottom: 30px;">
+      <div class="Titilos">
+        <h3>Adicionar um novo ativo em alta</h3> 
+        <div class="arrow">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+        </div> 
+      </div>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Nome do Ativo;</label>
+              <input type="text" class="form-control" id="nome_ativo">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Ultimo valor do ativo;</label>
+              <input type="text" class="form-control" id="ultimo">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Variacao do dia;</label>
+              <input type="text" class="form-control" id="variacao_dia">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Valor minimo do ativo;</label>
+              <input type="text" class="form-control" id="valor_minimo">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Valor maximo do ativo;</label>
+              <input type="text" class="form-control" id="valor_maximo">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Data do ativo</label>
+              <input type="datetime-local" class="form-control" id="data_ativo">
+            </div>
+          </div>
+          
+          <div> 
+          <button onclick="adicionarAtivosAlta()" class="btn btn-primary">Adicionar</button>
+        </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!--Atualizar ativos em alta-->
+
+    <section style="margin-bottom: 30px;">
+      <div class="Titilos">
+        <h3>Atualizar ativos em alta</h3> 
+        <div class="arrow">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+        </div> 
+      </div>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Nome do Ativo;</label>
+              <input type="text" class="form-control" id="nome_ativo3">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Ultimo valor do ativo;</label>
+              <input type="text" class="form-control" id="ultimo3">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Variacao do dia;</label>
+              <input type="text" class="form-control" id="variacao_dia3">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Valor minimo do ativo;</label>
+              <input type="text" class="form-control" id="valor_minimo3">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Valor maximo do ativo;</label>
+              <input type="text" class="form-control" id="valor_maximo3">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Data do ativo</label>
+              <input type="datetime-local" class="form-control" id="data_ativo3">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button style="margin-top: 70px;" onclick="atualizarAtivo()" class="btn btn-primary">Atualizar</button>
+            </div>
+            <div style="width: 50%;">
+              <label for="inputEmail4">ID do Ativo</label>
+              <input  type="text" class="form-control" id="atualizar">
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </section>
+
+
+    <!--Excluir ativos em alta-->
+       
+    <section>
+      <div class="Titilos">
+        <h3>Excluir ativo em alta</h3> 
+        <div class="arrow">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+          </svg>
+        </div> 
+      </div>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">ID do ativo que deseja excluir;</label>
+              <input type="text" class="form-control" id="excluir">
+            </div>
+            <button onclick="excluirAtivo()" class="btn btn-primary" style="height: 50px; margin-top: 30px;">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+
+    
+    <!--Ativos em baixa-->
     <section>
       <div class="Titilos">
         <h3>Ativos em baixa</h3> 
@@ -451,24 +598,163 @@
               <th scope="col">Variacao Diaria</th>
               <th scope="col">Valor Minimo</th>
               <th scope="col">Valor Maximo</th>
+              <th scope="col">ID</th>
             </tr>
           </thead>
           <tbody id="Ativos_baixa">
-            <tr>
-              <th scope="row">YDUQ3</th>
-              <td>R$31,4</td>
-              <td>-1,21%</td>
-              <td>R$30,25</td>
-              <td>R$32,25</td>
-            </tr>
+            <!--Rederizar tabela pelo main.js-->
           </tbody>
         </table>
       </div>
     </section>
+  
+    <!--Adicionar ativos em baixa-->
+    <div class="btn_edit_off" id="btn_edit" onclick="toggleEdit()"><strong>Editar ativos</strong></div>
+    <div id="edit--ativoAlta" class="sumir">
+    <section style="margin-bottom: 30px;">
+      <div class="Titilos">
+        <h3>Adicionar um novo ativo em baixa</h3> 
+        <div class="arrow">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+        </div> 
+      </div>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Nome do Ativo;</label>
+              <input type="text" class="form-control" id="nome_ativo2">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Ultimo valor do ativo;</label>
+              <input type="text" class="form-control" id="ultimo2">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Variacao do dia;</label>
+              <input type="text" class="form-control" id="variacao_dia2">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Valor minimo do ativo;</label>
+              <input type="text" class="form-control" id="valor_minimo2">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Valor maximo do ativo;</label>
+              <input type="text" class="form-control" id="valor_maximo2">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Data do ativo</label>
+              <input type="datetime-local" class="form-control" id="data_ativo2">
+            </div>
+          </div>
+          
+          <div>
+            <button onclick="adicionarAtivosBaixa()" class="btn btn-primary">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </section> 
+
+    <!--Atualizar ativos em baixa-->
+
+    <section style="margin-bottom: 30px;">
+      <div class="Titilos">
+        <h3>Atualizar ativos em baixa</h3> 
+        <div class="arrow">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+        </div> 
+      </div>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Nome do Ativo;</label>
+              <input type="text" class="form-control" id="nome_ativo4">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Ultimo valor do ativo;</label>
+              <input type="text" class="form-control" id="ultimo4">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Variacao do dia;</label>
+              <input type="text" class="form-control" id="variacao_dia4">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Valor minimo do ativo;</label>
+              <input type="text" class="form-control" id="valor_minimo4">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Valor maximo do ativo;</label>
+              <input type="text" class="form-control" id="valor_maximo4">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Data do ativo</label>
+              <input type="datetime-local" class="form-control" id="data_ativo4">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button style="margin-top: 70px;" onclick="atualizarAtivo2()" class="btn btn-primary">Atualizar</button>
+            </div>
+            <div style="width: 50%;">
+              <label for="inputEmail4">ID do Ativo</label>
+              <input  type="text" class="form-control" id="atualizar2">
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </section>
+
+
+
+  
+      <!--EXcluir ativos em baixa-->
+    <section>
+      <div class="Titilos">
+        <h3>Excluir ativo em baixa</h3> 
+        <div class="arrow">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+          </svg>
+        </div> 
+      </div>
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">ID do ativo que deseja excluir;</label>
+              <input type="text" class="form-control" id="excluirBaixa">
+            </div>
+            <button onclick="excluirAtivo_baixa()" class="btn btn-primary" style="height: 50px; margin-top: 30px;">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </div>
 
+</div>
 
-<section class="footer4 cid-s8rED7G1Uo" once="footers" id="footer4-s">    
+<section class="footer4 cid-s8rED7G1Uo" once="footers" id="footer4-s" style="margin-top: 200px;">    
     <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);"></div>
     <div class="container">
         <div class="row mbr-white">
